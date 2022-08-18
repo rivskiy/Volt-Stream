@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Volt Stream</title>
+</head>
+
+<body class="page__body">
+
+  <!--                                                  SVG СПРАЙТ -->
+  <svg class="visually-hidden" width="0" height="0">
+    <symbol viewBox="0 0 28 28" id="inst">
+      <path
+        d="M13.9998 0.666504C17.6225 0.666504 18.0745 0.679837 19.4958 0.746504C20.9158 0.813171 21.8825 1.03584 22.7332 1.3665C23.6132 1.70517 24.3545 2.16384 25.0958 2.90384C25.7738 3.57037 26.2984 4.37662 26.6332 5.2665C26.9625 6.11584 27.1865 7.08384 27.2532 8.50384C27.3158 9.92517 27.3332 10.3772 27.3332 13.9998C27.3332 17.6225 27.3198 18.0745 27.2532 19.4958C27.1865 20.9158 26.9625 21.8825 26.6332 22.7332C26.2994 23.6235 25.7747 24.43 25.0958 25.0958C24.4291 25.7736 23.6229 26.2982 22.7332 26.6332C21.8838 26.9625 20.9158 27.1865 19.4958 27.2532C18.0745 27.3158 17.6225 27.3332 13.9998 27.3332C10.3772 27.3332 9.92517 27.3198 8.50384 27.2532C7.08384 27.1865 6.11717 26.9625 5.2665 26.6332C4.37627 26.2991 3.56987 25.7744 2.90384 25.0958C2.22571 24.4294 1.70108 23.6231 1.3665 22.7332C1.03584 21.8838 0.813171 20.9158 0.746504 19.4958C0.683837 18.0745 0.666504 17.6225 0.666504 13.9998C0.666504 10.3772 0.679837 9.92517 0.746504 8.50384C0.813171 7.0825 1.03584 6.11717 1.3665 5.2665C1.70015 4.37608 2.22491 3.5696 2.90384 2.90384C3.57007 2.22548 4.37641 1.70081 5.2665 1.3665C6.11717 1.03584 7.0825 0.813171 8.50384 0.746504C9.92517 0.683837 10.3772 0.666504 13.9998 0.666504ZM13.9998 7.33317C12.2317 7.33317 10.536 8.03555 9.28579 9.28579C8.03555 10.536 7.33317 12.2317 7.33317 13.9998C7.33317 15.7679 8.03555 17.4636 9.28579 18.7139C10.536 19.9641 12.2317 20.6665 13.9998 20.6665C15.7679 20.6665 17.4636 19.9641 18.7139 18.7139C19.9641 17.4636 20.6665 15.7679 20.6665 13.9998C20.6665 12.2317 19.9641 10.536 18.7139 9.28579C17.4636 8.03555 15.7679 7.33317 13.9998 7.33317ZM22.6665 6.99984C22.6665 6.55781 22.4909 6.13389 22.1784 5.82133C21.8658 5.50877 21.4419 5.33317 20.9998 5.33317C20.5578 5.33317 20.1339 5.50877 19.8213 5.82133C19.5088 6.13389 19.3332 6.55781 19.3332 6.99984C19.3332 7.44186 19.5088 7.86579 19.8213 8.17835C20.1339 8.49091 20.5578 8.6665 20.9998 8.6665C21.4419 8.6665 21.8658 8.49091 22.1784 8.17835C22.4909 7.86579 22.6665 7.44186 22.6665 6.99984ZM13.9998 9.99984C15.0607 9.99984 16.0781 10.4213 16.8283 11.1714C17.5784 11.9216 17.9998 12.939 17.9998 13.9998C17.9998 15.0607 17.5784 16.0781 16.8283 16.8283C16.0781 17.5784 15.0607 17.9998 13.9998 17.9998C12.939 17.9998 11.9216 17.5784 11.1714 16.8283C10.4213 16.0781 9.99984 15.0607 9.99984 13.9998C9.99984 12.939 10.4213 11.9216 11.1714 11.1714C11.9216 10.4213 12.939 9.99984 13.9998 9.99984Z">
+      </path>
+    </symbol>
+    <symbol viewBox="0 0 28 24" id="twit">
+      <path
+        d="M27.5494 3.54124C26.5315 3.99149 25.452 4.2872 24.3467 4.41857C25.5117 3.72181 26.3837 2.62525 26.8001 1.33324C25.7067 1.9839 24.5081 2.4399 23.2587 2.68657C22.4195 1.78867 21.3072 1.19319 20.0947 0.992682C18.8821 0.792177 17.6373 0.99789 16.5538 1.57784C15.4702 2.15779 14.6086 3.07948 14.1029 4.19963C13.5972 5.31977 13.4757 6.57561 13.7574 7.7719C11.5402 7.66078 9.37118 7.0846 7.39112 6.08079C5.41106 5.07698 3.66424 3.66797 2.26407 1.94524C1.76846 2.7965 1.50801 3.7642 1.5094 4.74924C1.5094 6.68257 2.4934 8.39057 3.9894 9.39057C3.10408 9.3627 2.23825 9.12361 1.46407 8.69324V8.76257C1.46434 10.0502 1.9099 11.2981 2.7252 12.2947C3.54051 13.2912 4.67538 13.9752 5.9374 14.2306C5.11556 14.4533 4.25381 14.4861 3.4174 14.3266C3.77323 15.4349 4.46675 16.4042 5.40086 17.0987C6.33497 17.7933 7.46291 18.1783 8.62674 18.1999C7.47004 19.1083 6.14564 19.7799 4.72924 20.1761C3.31285 20.5724 1.83224 20.6856 0.37207 20.5092C2.921 22.1485 5.8882 23.0187 8.91874 23.0159C19.1761 23.0159 24.7854 14.5186 24.7854 7.14924C24.7854 6.90924 24.7787 6.66657 24.7681 6.42924C25.8599 5.64013 26.8022 4.6626 27.5507 3.54257L27.5494 3.54124Z">
+      </path>
+    </symbol>
+  </svg>
+
+  <!--                                                    Шапка -->
+  <header class="header container">
+    <img class="header__logo" src="img/logo.svg" alt="Логотип Volt Stream" width="146" height="50">
+    <nav class="header__nav header__nav--close">
+      <ul class="header__list nav">
+        <li class="nav__item"><a class="nav__link" href="#about">О нас</a></li>
+        <li class="nav__item"><a class="nav__link" href="#stages">Этапы</a></li>
+        <li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
+        <li class="nav__item"><a class="nav__link" href="#photo">Наши работы</a></li>
+        <li class="nav__item"><a class="nav__link" href="#answer">Вопрос ответ</a></li>
+      </ul>
+      <div class="close-btn"><span class="visually-hidden">Закрыть меню</span></div>
+    </nav>
+    <div class="header__callback callback">
+      <a class="callback__phone" href="tel:78005554480">+7 800 555 44 80</a>
+      <a class="callback__link" href="#consult">Заказать обратный звонок</a>
+    </div>
+    <div class="burger"><span class="visually-hidden">Открыть меню</span></div>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Сайт компании Volt Stream</h1>
+
+    <!--                                              Предложение -->
+    <section class="offer container">
+      <h2 class="visually-hidden">Предложение</h2>
+      <div class="offer__content">
+        <p class="offer__title"><span>Рассчитаем стоимость</span> комплектующих и установки <span>системы
+            заземления</span> за 1 день</p>
+        <p class="offer__text">Получите подробную смету ответив<br> всего на 5 простых вопросов</p>
+        <button class="offer__btn btn" type="button">Получить расчет</button>
+        <ul class="offer__list advantages">
+          <li class="advantages__item">
+            <div class="item-star">Собственное производство</div>
+          </li>
+          <li class="advantages__item">
+            <div class="item-backet">Наличие товара на складе</div>
+          </li>
+          <li class="advantages__item">
+            <div class="item-doc">Выдаем всю документацию</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--                                              Специализация -->
+    <section id="about" class="speciality mask">
+      <div class="container">
+        <h2 class="speciality__title title">Специализируемся<br> на установке заземления<br> по направлениям</h2>
+        <ul class="speciality__list">
+          <li class="speciality__item">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/speciality/tablet-speciality-1.png">
+              <source media="(min-width: 1024px)" srcset="img/speciality/desctope-speciality-1.png">
+              <img class="speciality__img" src="img/speciality/mobail-speciality-1.png" alt="Торговый центр" width="300"
+                height="200">
+            </picture>
+            <div class="speciality__box">
+              <h3 class="speciality__sub-title">Торговые центры</h3>
+              <ul class="speciality-sub__list">
+                <li class="speciality-sub__item">Садовый центр Дарвин</li>
+                <li class="speciality-sub__item">OBI</li>
+                <li class="speciality-sub__item">Тц Вешняки</li>
+                <li class="speciality-sub__item">ТЦ Любимый Мичуринский проспект</li>
+              </ul>
+              <p class="speciality__text speciality__text--mobile">Садовый центр Дарвин, OBI, Тц Вешняки, ТЦ Любимый
+                Мичуринский
+                проспект</p>
+            </div>
+          </li>
+          <li class="speciality__item">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/speciality/tablet-speciality-2.png">
+              <source media="(min-width: 1024px)" srcset="img/speciality/desctope-speciality-1.png">
+              <img class="speciality__img" src="img/speciality/mobail-speciality-2.png" alt="Торговый центр" width="300"
+                height="200">
+            </picture>
+            <div class="speciality__box">
+              <h3 class="speciality__sub-title">Частные дома</h3>
+              <p class="speciality__text">Установили заземления и молние защиту для более 2000 домов</p>
+            </div>
+          </li>
+          <li class="speciality__item">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/speciality/tablet-speciality-3.png">
+              <source media="(min-width: 1024px)" srcset="img/speciality/desctope-speciality-1.png">
+              <img class="speciality__img" src="img/speciality/mobail-speciality-3.png" alt="Торговый центр" width="300"
+                height="200">
+            </picture>
+            <div class="speciality__box">
+              <h3 class="speciality__sub-title">Складские комплексы</h3>
+              <p class="speciality__text speciality__text--width">Установили заземление<br> и молниезащиту для более<br>
+                100 складских комплексов</p>
+            </div>
+          </li>
+          <li class="speciality__item">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/speciality/tablet-speciality-4.png">
+              <source media="(min-width: 1024px)" srcset="img/speciality/desctope-speciality-1.png">
+              <img class="speciality__img" src="img/speciality/mobail-speciality-4.png" alt="Торговый центр" width="300"
+                height="200">
+            </picture>
+            <div class="speciality__box">
+              <h3 class="speciality__sub-title">Производственные здания</h3>
+              <ul class="speciality-sub__list">
+                <li class="speciality-sub__item">Завод Renault</li>
+                <li class="speciality-sub__item">Завод Майский Чай</li>
+                <li class="speciality-sub__item">Завод Хохланд Рус</li>
+                <li class="speciality-sub__item">Завод KERAMA MARAZZI</li>
+              </ul>
+              <p class="speciality__text speciality__text--mobile speciality__text--width">Завод Renault, Завод Майский
+                Чай, Завод Хохланд Рус, Завод KERAMA MARAZZI</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--                                                      Баннер -->
+    <section class="banner container">
+      <h2 class="visually-hidden">Баннер</h2>
+      <img class="banner__img" src="img/banner.png" alt="" width="1348" height="682">
+    </section>
+    <!--                                                    Этапы работы -->
+    <section class="stages mask" id="stages">
+      <div class="container">
+        <h2 class="visually-hidden">Порядок выполнения работы</h2>
+        <p class="stages__title title">Выполняем весь цикл работ<br> от расчета до оформления документации</p>
+        <ul class="stages__list">
+          <li class="stages__item stages__item--accent"><span class="number">01</span>Предварительный расчет
+            материалов и стоимости работ</li>
+          <li class="stages__item"><span class="number">02</span>Бесплатный выезд<br>
+            инжинера на замер</li>
+          <li class="stages__item"><span class="number">03</span>Заключение договора</li>
+          <li class="stages__item"><span class="number">04</span>Предоплата</li>
+          <li class="stages__item"><span class="number">05</span>Выполнение работ</li>
+          <li class="stages__item"><span class="number">06</span>Оплата и выдача исполнительной документации</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--                                                   Отзывы слайдер-->
+    <section class="reviews slider" id="reviews">
+      <div class="slider__box container">
+        <div class="slider__top">
+          <h2 class="reviews__title slider__title title">Отзывы о работе с нами</h2>
+          <div class="slider__buttons">
+            <div class="slider__btn slider__btn--prev reviews__btn--prev"></div>
+            <div class="slider__btn slider__btn--next reviews__btn--next"></div>
+          </div>
+        </div>
+        <div class="reviews__slider-container swiper-container">
+        <ul class="reviews__list slider__list swiper-wrapper">
+          <li class="reviews__item slider__item swiper-slide">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/review/desctope-review-1.png">
+              <img src="img/review/review-1.png" alt="Письменный отзыв" width="175" height="245">
+            </picture>
+          </li>
+          <li class="reviews__item slider__item swiper-slide">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/review/desctope-review-2.png">
+              <img src="img/review/review-2.png" alt="Письменный отзыв" width="175" height="245">
+            </picture>
+          </li>
+          <li class="reviews__item slider__item swiper-slide">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/review/desctope-review-3.png">
+              <img src="img/review/review-3.png" alt="Письменный отзыв" width="175" height="245">
+            </picture>
+          </li>
+          <li class="reviews__item slider__item swiper-slide">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/review/desctope-review-4.png">
+              <img src="img/review/review-4.png" alt="Письменный отзыв" width="175" height="245">
+            </picture>
+          </li>
+          <li class="reviews__item slider__item swiper-slide">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/review/desctope-review-1.png">
+              <img src="img/review/review-1.png" alt="Письменный отзыв" width="175" height="245">
+            </picture>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </section>
+
+    <!--                                                   Фото слайдер-->
+    <section class="photo slider" id="photo">
+      <div class="slider__box container">
+        <div class="slider__top">
+          <h2 class="photo__title slider__title title">Фото готовых работ</h2>
+          <div class="slider__buttons">
+            <div class="slider__btn slider__btn--prev photo__btn--prev"></div>
+            <div class="slider__btn slider__btn--next photo__btn--next"></div>
+          </div>
+        </div>
+        <div class="photo__slider-container swiper-container">
+        <ul class="photo__list slider__list swiper-wrapper">
+          <li class="photo__item slider__item swiper-slide">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/photo/tablet-photo-1.png">
+              <source media="(min-width: 1024px)" srcset="img/photo/desctope-photo-1.png">
+              <img src="img/photo/mobile-photo-1.png" alt="Фото работы" width="240" height="245">
+            </picture>
+          </li>
+          <li class="photo__item slider__item swiper-slide">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/photo/tablet-photo-2.png">
+              <source media="(min-width: 1024px)" srcset="img/photo/desctope-photo-2.png">
+              <img src="img/photo/mobile-photo-1.png" alt="Фото работы" width="240" height="245">
+            </picture>
+          </li>
+          <li class="photo__item slider__item swiper-slide">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/photo/tablet-photo-3.png">
+              <source media="(min-width: 1024px)" srcset="img/photo/desctope-photo-3.png">
+              <img src="img/photo/mobile-photo-1.png" alt="Фото работы" width="240" height="245">
+            </picture>
+          </li>
+          <li class="photo__item slider__item swiper-slide">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/photo/tablet-photo-4.png">
+              <source media="(min-width: 1024px)" srcset="img/photo/desctope-photo-1.png">
+              <img src="img/photo/mobile-photo-1.png" alt="Фото работы" width="240" height="245">
+            </picture>
+          </li>
+          <li class="photo__item slider__item swiper-slide">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/photo/tablet-photo-1.png">
+              <source media="(min-width: 1024px)" srcset="img/photo/desctope-photo-1.png">
+              <img src="img/photo/mobile-photo-1.png" alt="Фото работы" width="240" height="245">
+            </picture>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--                                            Консультация-->
+    <section class="consult mask" id="consult">
+      <h2 class="visually-hidden">Консультация</h2>
+      <div class="container">
+        <div class="consult__box">
+          <div class="consult__img"></div>
+          <div class="consult__content">
+            <p class="consult__title">Закажите<span> бесплатную консультацию</span> инженера и получите полный расчет
+              стоимости комплектующих и установки</p>
+            <form class="consult__form" action="#" method="post">
+              <label><span class="visually-hidden">Ваше имя</span>
+                <input class="input-name" type="text" name="name" placeholder="Ваше имя">
+              </label>
+              <label><span class="visually-hidden">Ваш телефон</span>
+                <input class="input-phone" type="tel" name="phone" placeholder="Ваш телефон">
+              </label>
+              <button class="consult__btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--                                                   Сертификаты слайдер-->
+    <section class="sert slider">
+      <div class="slider__box container">
+        <div class="slider__top">
+          <h2 class="sert__title slider__title">Комплектующие для систем заземления
+            и молниезащиты сертефицированны
+            в независимых лабораториях</h2>
+          <div class="slider__buttons">
+            <div class="slider__btn slider__btn--prev sert__btn--prev"></div>
+            <div class="slider__btn slider__btn--next sert__btn--next"></div>
+          </div>
+        </div>
+        <div class="sert__slider-container swiper-container">
+        <ul class="sert__list slider__list swiper-wrapper">
+          <li class="sert__item slider__item swiper-slide"><img src="img//certificate/certificate.png" alt="Сертификат" width="260"
+              height="366"></li>
+          <li class="sert__item slider__item swiper-slide"><img src="img//certificate/certificate.png" alt="Сертификат" width="260"
+              height="366"></li>
+          <li class="sert__item slider__item swiper-slide"><img src="img//certificate/certificate.png" alt="Сертификат" width="260"
+              height="366"></li>
+          <li class="sert__item slider__item swiper-slide"><img src="img//certificate/certificate.png" alt="Сертификат" width="260"
+              height="366"></li>
+          <li class="sert__item slider__item swiper-slide"><img src="img//certificate/certificate.png" alt="Сертификат" width="260"
+              height="366"></li>
+          <li class="sert__item slider__item swiper-slide"><img src="img//certificate/certificate.png" alt="Сертификат" width="260"
+              height="366"></li>
+          <li class="sert__item slider__item swiper-slide"><img src="img//certificate/certificate.png" alt="Сертификат" width="260"
+              height="366"></li>
+          <li class="sert__item slider__item swiper-slide"><img src="img//certificate/certificate.png" alt="Сертификат" width="260"
+              height="366"></li>
+        </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--                                            Вопрос ответ-->
+    <section class="answer mask" id="answer">
+      <div class="container">
+        <h2 class="answer__title title">Ответы на частые вопросы</h2>
+        <div class="answer__box">
+          <ul class="answer__list accordion">
+            <li class="accordion__item accordion__item--active">
+              <div class="accordion__trigger">Сколько времени потребуется на расчет?<div class="arrow"></div>
+              </div>
+              <p class="accordion__content">Время от отправки заявки до готовой сметы<br> и проекта занимает в среднем
+                3-5 дней</p>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__trigger">Какая документация предоставляется после монтажа?<div class="arrow"></div>
+              </div>
+              <p class="accordion__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis
+                ullam beatae libero laboriosam dolor</p>
+            </li>
+          </ul>
+          <ul class="answer__list accordion">
+            <li class="accordion__item">
+              <div class="accordion__trigger">Длительность монтажа для частного дома?<div class="arrow"></div>
+              </div>
+              <p class="accordion__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis
+                ullam beatae libero laboriosam dolor</p>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__trigger">Какой материал используется в заземлении<div class="arrow"></div>
+              </div>
+              <p class="accordion__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis
+                ullam beatae libero laboriosam dolor</p>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__trigger">Какие способы оплаты принимаете?<div class="arrow"></div>
+              </div>
+              <p class="accordion__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis
+                ullam beatae libero laboriosam dolor</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--                                          Контакты-->
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contacts__content">
+        <p class="contacts__title title">Свяжитесь с нами<br> или приезжайте в гости на чашечку кофе!</p>
+        <p class="contacts__contacts"><a href="tel:78005554480">+7 800 555 44 80</a><br> Info@voltstream.ru</p>
+        <p class="contacts__address">Россия, Москва, Ул. Газгольдерная 12 стр. 5</p>
+        <ul class="socials__list socials">
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+              <svg class="btn-icon">
+                <use href="#inst"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <span class="visually-hidden">Твиттер</span>
+              <svg class="btn-icon">
+                <use href="#twit"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/accordion.js"></script>
+</body>
+
+</html>
