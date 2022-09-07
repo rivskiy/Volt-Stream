@@ -29,7 +29,7 @@
   <!--                                                    Шапка -->
   <header class="header container">
     <img class="header__logo" src="img/logo.svg" alt="Логотип Volt Stream" width="146" height="50">
-    <nav class="header__nav header__nav--close">
+    <nav class="header__nav">
       <ul class="header__list nav">
         <li class="nav__item"><a class="nav__link" href="#about">О нас</a></li>
         <li class="nav__item"><a class="nav__link" href="#stages">Этапы</a></li>
@@ -37,13 +37,13 @@
         <li class="nav__item"><a class="nav__link" href="#photo">Наши работы</a></li>
         <li class="nav__item"><a class="nav__link" href="#answer">Вопрос ответ</a></li>
       </ul>
-      <div class="close-btn"><span class="visually-hidden">Закрыть меню</span></div>
     </nav>
+    <div class="header__nav-overlay"></div>
     <div class="header__callback callback">
       <a class="callback__phone" href="tel:78005554480">+7 800 555 44 80</a>
       <a class="callback__link" href="#consult">Заказать обратный звонок</a>
     </div>
-    <div class="burger"><span class="visually-hidden">Открыть меню</span></div>
+    <button class="burger"><span class="visually-hidden">Открыть меню</span><span></span></button>
   </header>
 
   <main>
@@ -181,8 +181,8 @@
         <ul class="reviews__list slider__list swiper-wrapper">
           <li class="reviews__item slider__item swiper-slide">
             <picture>
-              <source media="(min-width: 1024px)" srcset="img/review/desctope-review-1.png">
-              <img src="img/review/review-1.png" alt="Письменный отзыв" width="175" height="245">
+              <source media="(min-width: 1024px)" srcset="img/review/desctope-review-2.png">
+              <img src="img/review/review-2.png" alt="Письменный отзыв" width="175" height="245">
             </picture>
           </li>
           <li class="reviews__item slider__item swiper-slide">
@@ -205,8 +205,8 @@
           </li>
           <li class="reviews__item slider__item swiper-slide">
             <picture>
-              <source media="(min-width: 1024px)" srcset="img/review/desctope-review-1.png">
-              <img src="img/review/review-1.png" alt="Письменный отзыв" width="175" height="245">
+              <source media="(min-width: 1024px)" srcset="img/review/desctope-review-4.png">
+              <img src="img/review/review-4.png" alt="Письменный отзыв" width="175" height="245">
             </picture>
           </li>
         </ul>
@@ -396,9 +396,8 @@
     </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="js/mobile-menu.js"></script>
   <script src="js/slider.js"></script>
-  <script src="js/accordion.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
